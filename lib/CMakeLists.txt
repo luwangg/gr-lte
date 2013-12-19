@@ -53,7 +53,7 @@ list(APPEND lte_sources
 )
 
 add_library(gnuradio-lte SHARED ${lte_sources})
-target_link_libraries(gnuradio-lte ${Boost_LIBRARIES} ${GNURADIO_RUNTIME_LIBRARIES} ${FFTW3F_LIBRARIES})
+target_link_libraries(gnuradio-lte ${Boost_LIBRARIES} ${GNURADIO_RUNTIME_LIBRARIES} ${GNURADIO_VOLK_LIBRARIES} ${GNURADIO_PMT_LIBRARIES} ${FFTW3F_LIBRARIES})
 set_target_properties(gnuradio-lte PROPERTIES DEFINE_SYMBOL "gnuradio_lte_EXPORTS")
 
 ########################################################################
